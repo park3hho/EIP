@@ -1,0 +1,18 @@
+services:
+  java-service:
+    build: ./java
+    container_name: java
+    volumes:
+      - ./java:/workspace
+    tty: true
+    stdin_open: true
+    command: bash
+
+  c-service:
+    build: ./c
+    container_name: cpp
+    volumes:
+      - ./c:/workspace
+    tty: true
+    stdin_open: true
+    command: bash
